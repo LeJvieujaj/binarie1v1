@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+#lobbyScreen, #gameScreen {
+    margin-top: 20px;
+}
+
+input, button {
+    margin: 10px;
+    padding: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Indicateur initial (rouge) */
+#indicator {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Indicateur lorsque le joueur a joué (vert) */
+#indicator.played {
+    background-color: green;
+}
+
+#myGuess {
+    width: 200px;
+}
+
+#opponentGuess {
+    width: 200px;
+}

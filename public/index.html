@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeu de Devinette 1v1</title>
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+    <div id="pseudoScreen">
+        <input type="text" id="pseudoInput" placeholder="Entrez votre pseudo">
+        <button id="joinLobbyBtn">Rejoindre le Lobby</button>
+    </div>
+
+    <div id="lobbyScreen" style="display:none;">
+        <button id="createGameBtn">Créer une partie</button>
+        <button id="joinGameBtn">Rejoindre une partie</button>
+        <!-- Ajoutez cet élément pour afficher les parties disponibles -->
+        <div id="lobby"></div>
+    </div>
+    
+
+    <div id="gameScreen" style="display:none;">
+        <div id="opponentInfo"></div>
+        <input type="number" id="myGuess" placeholder="Votre chiffre (0 ou 1)" min="0" max="1">
+        <input type="number" id="opponentGuess" placeholder="Deviner le chiffre de l'adversaire" min="0" max="1">
+        <button id="validateBtn">Valider</button>
+        <div id="score">Score : Vous 0 - Adversaire 0</div>
+        <div id="message" style="display: none;"></div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script> <!-- Lien vers le fichier JavaScript -->
+</body>
+</html>
